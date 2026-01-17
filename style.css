@@ -152,6 +152,77 @@ nav {
   background: #c92f3c;
   transform: translateY(-3px);
 }
+.about {
+  padding: 100px 10%;
+  background: #f7f7f7;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: #444;
+}
+
+.about-highlight {
+  font-size: 1.2rem;
+  color: #e63946;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.about-services {
+  margin-top: 4rem;
+}
+
+.about-services h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-services ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  list-style: none;
+}
+
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 4rem;
+}
+
+.value-box {
+  background: #111;
+  color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.value-box h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #e63946;
+}
+
+.value-box p {
+  line-height: 1.6;
+}
+
 
 
 @media screen and (max-width: 1170px) {
@@ -235,6 +306,15 @@ nav {
     text-align: center;
     padding: 16px;
     font-size: 1rem;
+  }
+
+   .about {
+    padding: 70px 6%;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.2rem;
   }
 
   @keyframes slideDown {
