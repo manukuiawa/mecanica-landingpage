@@ -289,6 +289,68 @@ nav {
   padding-left: 20px;
 }
 
+.brands {
+  background: #ffffff;
+  padding: 140px 10%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.brands h2 {
+  font-size: 2.8rem;
+  color: #c92f3c;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.brands p {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.brands-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  animation: scroll 30s linear infinite;
+}
+
+.brands-track img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.brands-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 
 @media screen and (max-width: 1170px) {
   #nav_list {
@@ -411,6 +473,20 @@ nav {
 
   .service-content ul {
     padding-left: 18px;
+  }
+  
+   .brands {
+    padding: 100px 6%;
+    min-height: 90vh;
+  }
+
+  .brands-track img {
+    height: 45px;
+  }
+
+  .brands-track {
+    gap: 40px;
+    animation-duration: 25s;
   }
 
   @keyframes slideDown {
