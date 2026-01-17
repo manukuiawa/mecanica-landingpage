@@ -17,3 +17,21 @@ $(document).ready(function () {
     }
   });
 });
+
+  const headers = document.querySelectorAll(".service-header");
+
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector(".icon");
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.textContent = "+";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = "–";
+      }
+    });
+  });
+

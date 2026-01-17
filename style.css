@@ -198,7 +198,6 @@ nav {
   list-style: none;
 }
 
-
 .about-values {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -223,6 +222,72 @@ nav {
   line-height: 1.6;
 }
 
+.services {
+  padding: 100px 10%;
+  background: #000000;
+}
+
+.services-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.services h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #c92f3c;
+}
+
+.services-subtitle {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 4rem;
+}
+
+.service-card {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.service-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.service-header:hover {
+  color: #c92f3c;
+}
+
+.service-header .icon {
+  font-size: 1.5rem;
+  color: #c92f3c;
+}
+
+.service-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.service-content p,
+.service-content ul {
+  padding-bottom: 20px;
+  color: #e5e5e5;
+  line-height: 1.6;
+}
+
+.service-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
 
 
 @media screen and (max-width: 1170px) {
@@ -315,6 +380,37 @@ nav {
 
   .about-text h2 {
     font-size: 2.2rem;
+  }
+
+   .services {
+    padding: 70px 6%;
+  }
+
+  .services h2 {
+    font-size: 2.2rem;
+  }
+
+  .services-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-header {
+    font-size: 1.1rem;
+    padding: 18px 0;
+  }
+
+  .service-header .icon {
+    font-size: 1.4rem;
+  }
+
+  .service-content p,
+  .service-content ul {
+    font-size: 0.95rem;
+  }
+
+  .service-content ul {
+    padding-left: 18px;
   }
 
   @keyframes slideDown {
