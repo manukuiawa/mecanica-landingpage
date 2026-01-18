@@ -323,7 +323,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 60px;
-  animation: scroll 30s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
 .brands-track img {
@@ -486,7 +486,7 @@ nav {
 
   .brands-track {
     gap: 40px;
-    animation-duration: 25s;
+    animation-duration: 15s;
   }
 
   @keyframes slideDown {
