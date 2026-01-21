@@ -10,10 +10,9 @@ $(document).ready(function () {
       $menu.removeClass('show').addClass('hide');
       $icon.removeClass('fa-x').addClass('fa-bars');
 
-      // Espera a animação terminar pra esconder de vez
       setTimeout(() => {
         $menu.css('display', 'none');
-      }, 400); // igual ao tempo do slideUp
+      }, 400); 
     }
   });
 });
@@ -35,8 +34,6 @@ $(document).ready(function () {
     });
   });
 
-
-
   const images = document.querySelectorAll(".gallery-item img");
   const modal = document.getElementById("galleryModal");
   const modalImg = document.getElementById("galleryModalImg");
@@ -57,8 +54,44 @@ $(document).ready(function () {
     if (e.target === modal) modal.classList.remove("active");
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.reviews-track');
+  const cards = document.querySelectorAll('.review-card');
+  const originalCardsCount = cards.length; 
+  const cardWidth = cards[0].offsetWidth + 24; 
 
+  // Duplica os cards para criar o efeito de loop infinito
+  track.innerHTML += track.innerHTML;
 
+  // Atualiza a lista de cards após duplicar 
+  const allCards = document.querySelectorAll('.review-card');
 
+  const leftArrow = document.querySelector('.arrow.left');
+  const rightArrow = document.querySelector('.arrow.right');
 
+  // Função para mover para a direita
+  rightArrow.addEventListener('click', () => {
+    track.scrollBy({ left: cardWidth, behavior: 'smooth' });
 
+    // Após a animação, verifica se passou do meio e reseta suavemente
+    setTimeout(() => {
+      if (track.scrollLeft >= cardWidth * originalCardsCount) {
+        track.style.scrollBehavior = 'auto';
+        track.scrollLeft -= cardWidth * originalCardsCount;
+        track.style.scrollBehavior = 'smooth';
+      }
+    }, 300);
+  });
+
+  // Função para mover
+  leftArrow.addEventListener('click', () => {
+    track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    setTimeout(() => {
+      if (track.scrollLeft <= 0) {
+        track.style.scrollBehavior = 'auto';
+        track.scrollLeft += cardWidth * originalCardsCount;
+        track.style.scrollBehavior = 'smooth';
+      }
+    }, 300); 
+  });
+});
