@@ -440,6 +440,143 @@ nav {
   border-radius: 22px;
 }
 
+.reviews {
+  padding: 120px 8%;
+  background: #ffffff;
+  color: #111;
+}
+
+.reviews h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.score {
+  font-size: 3.8rem;
+  font-weight: bold;
+  color: #c00000;
+}
+
+.rating-info .stars {
+  color: #c00000;
+  font-size: 1.4rem;
+}
+
+.rating-info p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.reviews-track::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  min-width: 400px;
+  background: #000;
+  color: #fff;
+  border-radius: 22px;
+  padding: 30px;
+  position: relative;
+}
+
+.review-card h3 {
+  margin: 12px 0 6px;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.review-card .stars {
+  color: #c00000;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: #c00000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.google-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.reviews-wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;
+  border: 2px solid #c00000;
+  color: #c00000;
+
+  font-size: 2.2rem;
+  width: 48px;
+  height: 48px;
+  line-height: 1;
+
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: -70px;
+}
+
+.arrow.right {
+  right: -70px;
+}
+
+.arrow:hover {
+  background: #c00000;
+  color: #fff;
+}
 
 @media screen and (max-width: 1170px) {
   #nav_list {
@@ -586,6 +723,18 @@ nav {
       "b c"
       "d d"
       "e f";
+
+  .reviews-wrapper {
+    align-items: stretch;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .reviews-track {
+    overflow-x: auto;
+  }
 
   @keyframes slideDown {
     from {
