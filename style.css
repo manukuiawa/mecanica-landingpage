@@ -728,13 +728,82 @@ nav {
     align-items: stretch;
   }
 
-  .arrow {
-    display: none;
+  .reviews {
+    padding: 80px 5%; /* Reduz padding lateral para telas menores */
+  }
+
+  .reviews h2 {
+    font-size: 2rem; /* Tamanho menor para o título */
+    margin-bottom: 30px;
+  }
+
+  .rating-summary {
+    flex-direction: column; /* Empilha o score e as estrelas verticalmente */
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .score {
+    font-size: 2.8rem; /* Score menor */
+  }
+
+  .rating-info .stars {
+    font-size: 1.2rem;
+  }
+
+  .rating-info p {
+    font-size: 0.9rem;
+  }
+
+  .reviews-wrapper {
+    gap: 10px; /* Gap menor entre setas e track */
   }
 
   .reviews-track {
-    overflow-x: auto;
+    gap: 16px; /* Gap menor entre cards */
   }
+
+  .review-card {
+    min-width: 280px; /* Largura menor para caber melhor em mobile */
+    padding: 20px; /* Padding interno menor */
+  }
+
+  .review-card h3 {
+    font-size: 1rem; /* Nome menor */
+  }
+
+  .review-card p {
+    font-size: 0.9rem;
+  }
+
+  .avatar {
+    width: 40px; /* Avatar menor */
+    height: 40px;
+  }
+
+  .google-badge {
+    font-size: 0.7rem;
+    top: 15px;
+    right: 15px;
+  }
+
+  .arrow {
+    width: 40px; /* Setas menores */
+    height: 40px;
+    font-size: 1.8rem;
+    border-width: 1px; /* Borda mais fina */
+  }
+
+  .arrow.left {
+    left: 10px; /* Posiciona setas dentro do wrapper para evitar overflow */
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+}
+
 
   @keyframes slideDown {
     from {
@@ -757,5 +826,4 @@ nav {
       opacity: 0;
       }
   }
-}
 }
