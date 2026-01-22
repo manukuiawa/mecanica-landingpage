@@ -723,7 +723,7 @@ nav {
       "b c"
       "d d"
       "e f";
-
+  }
    .reviews {
     padding: 80px 5%;
   }
@@ -811,5 +811,4 @@ nav {
       opacity: 0;
       }
   }
-}
 }
