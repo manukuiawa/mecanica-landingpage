@@ -578,6 +578,87 @@ nav {
   color: #fff;
 }
 
+.location {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+
+.location-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 380px;
+  background: url("assets/home.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.location-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(6px);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.location-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.55);
+  z-index: 2;
+}
+
+.location-content {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.location-text {
+  font-size: clamp(2.3rem, 4.5vw, 3.2rem);
+  color: #ff1e1e;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  position: relative;
+
+  text-shadow:
+    0 0 6px rgba(206, 71, 71, 0.5),
+    0 0 14px rgba(255, 30, 30, 0.3),
+    0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+.location-content p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.location-map {
+  height: 330px;
+  margin-top: -45px;
+  overflow: hidden;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(100%) contrast(115%);
+}
+
+
 @media screen and (max-width: 1170px) {
   #nav_list {
     display: none;
