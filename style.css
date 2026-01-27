@@ -7,6 +7,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -764,7 +769,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(255, 2, 2, 0.35);
+    background: rgba(15, 13, 13, 0.35);
     backdrop-filter: blur(6px);
     display: none;
     align-items: center;
@@ -1025,3 +1030,4 @@ nav {
       }
   }
 }
+
