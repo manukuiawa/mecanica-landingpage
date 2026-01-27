@@ -4,16 +4,30 @@ $(document).ready(function () {
 
   $('#mobile_btn').on('click', function () {
     if (!$menu.hasClass('show')) {
+      
       $menu.removeClass('hide').addClass('show').css('display', 'flex');
       $icon.removeClass('fa-bars').addClass('fa-x');
+      $('body').addClass('no-scroll'); // 🔒 trava scroll
     } else {
+      
       $menu.removeClass('show').addClass('hide');
       $icon.removeClass('fa-x').addClass('fa-bars');
+      $('body').removeClass('no-scroll'); // 🔓 libera scroll
 
       setTimeout(() => {
         $menu.css('display', 'none');
-      }, 400); 
+      }, 400);
     }
+  });
+
+  $('#mobile_nav_list a').on('click', function () {
+    $menu.removeClass('show').addClass('hide');
+    $icon.removeClass('fa-x').addClass('fa-bars');
+    $('body').removeClass('no-scroll');
+
+    setTimeout(() => {
+      $menu.css('display', 'none');
+    }, 400);
   });
 });
 
